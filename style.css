@@ -1,15 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 :root {
     --white-color:#fff;
+    --background-body:#297eff;
 }
 
 
 body {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-body);
+}
+
+.search {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: var(--white-color);
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 5px var(--background-body);
+}
+
+
+.search .icon {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--white-color);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.search .icon::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 3px solid var(--background-body);
+    transform: translate(-4px, -4px);
+}
+
+.search .icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: var(--background-body);
+    transform: translate(6px, 6px) rotate(315deg);
 }
